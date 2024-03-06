@@ -37,7 +37,7 @@ const userData = {
   profilePicture: profilePicture,
   name: "Jundia Anwari",
   password: "khdmdcm258",
-  description: `Hi, my name is Jundia Anwari, I'm 16 years old, I live in Mataram, Lombok, Indonesia. I like learning something new and experimenting with technology.`,
+  description: `Hello! I'm Jundia Anwari, a 16-year-old web developer based in the beautiful island of Lombok, Indonesia. I'm enthusiastic about delving into the world of web development and dream of bringing digital creations to life`,
   mds: [
     {
       sourceName: "discord",
@@ -301,7 +301,7 @@ const Potofolio = (props) => {
                   }}
                 />
               </span>
-              <div className="portofolio-project-container">
+              <div className="portofolio-project-container" style={{paddingTop: '1x00px'}}>
                 <span
                   className="portofolio-project-container-header"
                   data-aos="fade-up"
@@ -311,50 +311,28 @@ const Potofolio = (props) => {
                 </span>
 
                 {userData.project.map((data, index) => (
-                  <div className="portofolio-pembalut" key={index}>
+                  <div className="portofolio-pembalut"  key={index}>
                     <div
                       className="portofolio-project-box"
-                      style={{ borderRadius: "30px" }}
                       // onMouseOver={() => setTransform({[index]: true})}
                       // onMouseOut={() => setTransform({[index]: false})}
                     >
-                      <div className="portofolio-left1">
-                        <span className="portofolio-text04">{data.name}</span>
-                        <span
-                          className="portofolio-text05"
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            height: "100%",
-                          }}
-                        >
-                          <span className="dsc">{data.description}</span>
-                          <a
-                            href="youtube.com"
-                            style={{
-                              color: "#ffffff",
-                              marginTop: "20px",
-                              fontSize: "24px",
-                            }}
-                          >
-                            View project
-                          </a>
-                        </span>
-                      </div>
-                      <div className="portofolio-right1">
-                        <div className="portofolio-image-box" ref={projectBox}>
-                          <img
-                            src={data.visual}
-                            alt=""
-                            // style={{
-                            //   boxShadow: `35px 10px 0px ${data.imageShadow}`,
-                            //   // transform: transform[index] ? `rotateZ(-10deg)` : 'rotateZ(10deg)',
-                            //   // width: transform[index] ? '100%' : '120%',
-                            // }}
-                          />
+  
+                      <div className="project-box-navbar" style={{width: '100%', borderBottom: '5px solid white', height: '40px'}}>
+                        <div className="project-box-navbar-dots" style={{width: '100px', height: '100%', display: 'flex', alignItems: 'center', gridGap: '10px', paddingLeft: '20px'}}>
+                          <div style={{width: '12px', height: '12px', borderRadius: '100%', backgroundColor: 'white'}}></div>
+                          <div style={{width: '12px', height: '12px', borderRadius: '100%', backgroundColor: 'white'}}></div>
+                          <div style={{width: '12px', height: '12px', borderRadius: '100%', backgroundColor: 'white'}}></div>
                         </div>
                       </div>
+                      <div className="project-image">
+                        <span style={{fontWeight: 'bold', color: 'white', fontSize: 32, position: 'absolute'}}>{data.name}..</span>
+                        <img src={data.visual} alt=""/>
+                      </div>
+                    </div>
+                    <div className="pnnd">
+                      <span style={{color: 'white', fontSize: '32px', fontWeight: 'semibold'}}>{data.name}</span>
+                      <span style={{width: '100%', marginTop: '20px', fontSize: '24px', color: 'white'}}>{data.description}</span>
                     </div>
                   </div>
                 ))}
@@ -401,7 +379,7 @@ const Potofolio = (props) => {
                   onChange={e => setNotes(e.target.value)}
                   value={notes}
                   style={
-                    noMessage ? {border: '1px solid red', outline: 'none'} : {border: '1px solid #ffffff4c', outline: 'none'}
+                    noMessage ? {border: '1px solid red', outline: 'none'} : {border: '3px solid #ffffff', outline: 'none'}
                   }
                   >
                     
@@ -411,7 +389,7 @@ const Potofolio = (props) => {
                 <ReCAPTHCA 
                   sitekey={import.meta.env.VITE_SITE_KEY_CAPTCHA}
                   onChange={e => setCaptchaValue(e)}
-                  theme="dark"
+                  theme="light"
                   ref={capRef}
                 />
                   <button type="submit" className="portofolio-button button">
