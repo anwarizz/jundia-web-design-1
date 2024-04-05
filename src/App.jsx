@@ -2,8 +2,9 @@ import { useState } from 'react'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Portofolio from './pages/Home'
-import Paralaks from './pages/paralaks'
 import ThanksContact from './pages/ThanksContact'
+import About from './pages/About';
+import UserEdit from './pages/UserEdit';
 
 function App() {
 
@@ -12,6 +13,14 @@ function App() {
       path: '/',
       element: <Portofolio/>,
       errorElement: <ThanksContact/>
+    },
+    {
+      path: '/about',
+      element: <About />
+    },
+    {
+      path: '/edit',
+      element: <UserEdit />
     }
   ])
 

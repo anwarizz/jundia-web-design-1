@@ -81,7 +81,7 @@ body {
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
-  background-color: #18171d;
+  
 }
 .portofolio-tagline-home {
   flex: 0 0 auto;
@@ -217,7 +217,7 @@ body {
   /* align-items: flex-start; */
   margin-bottom: 41.94px;
 }
-.portofolio-picture {
+.portofolio-picture {  
   flex: 0 0 auto;
   width: 160px;
   height: 163px;
@@ -369,7 +369,7 @@ body {
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #18171d;
+  
 }
 .portofolio-pembalut {
   width: 100%;
@@ -1091,9 +1091,7 @@ body {
     transition: 1s;
   }
 
-  .portofolio-picture {
-    margin-left: 40px;
-  }
+ 
 
   .portofolio-input {
     padding-left: 23px;
